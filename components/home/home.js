@@ -2,13 +2,13 @@
 
 const home = {
     template: `<h1>This is Home</h1>`,
-    bindings ={},
+    bindings: {},
     controller: [ function(){
         const vm = this;
         //code here por favor
     }]
     
-}
+};
 
 
 angular

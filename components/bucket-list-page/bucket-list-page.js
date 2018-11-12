@@ -1,8 +1,8 @@
 "use strict";
 
-const bucketListPage = {
+const bucketList = {
     template: `<h1>This is bucket list page, aka favorites</h1>`,
-    bindings = {},
+    bindings: {},
     controller: [function() {
         const vm = this;
         //code here por favor
@@ -13,4 +13,4 @@ const bucketListPage = {
 
 angular
     .module("App")
-    .component("bucketListPage",bucketListPage);
+    .component("bucketList",bucketList);
