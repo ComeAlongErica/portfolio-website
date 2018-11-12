@@ -1,7 +1,7 @@
 "use strict";
 
 const home = {
-    template: `<h1>This is Home</h1>`,
+    templateUrl: "components/home/home.html",
     bindings: {},
     controller: [ function(){
         const vm = this;
