@@ -2,12 +2,19 @@
 
 angular
     .module("App", ["ngRoute"])
-    // .config(["$routeProvider", ($routeProvider) => {   WE NEED TO UPDATE THIS, IT'S JUST FOR REFERENCE!
-    //     $routeProvider
-    //     .when("/user-profile", {
-    //         template: "<user-profile></user-profile>"
-    //     })
-    //     .when("/edit-profile", {
-    //         template: "<edit-profile></edit-profile>"
-    //     }).otherwise({redirectTo:"/user-profile"})
-    // }])
+    .config(["$routeProvider", ($routeProvider) => {
+        $routeProvider
+        .when("/home", {
+            template: "<home></home>"
+        })
+        .when("/search", {
+            template: "<search></search>"
+        })
+        .when("/bucket-list", {
+            template: "<bucket-list></bucket-list>"
+        })
+        .when("/event-list", {
+            template: "<event-list></event-list>"
+        })
+        .otherwise({redirectTo:"/home"})
+    }])
