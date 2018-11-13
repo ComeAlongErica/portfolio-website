@@ -1,41 +1,14 @@
 <section class="section-container">
-        <section class="toggle-container">
-                <a class="toggle-events" href="#!/bucket-list">Bucket List</a>
-            </section>
-                <section class="card">
-            <section class="date">
-                <p class="month-date">Dec 6</p>
-                <p class="day-time">7:00pm</p>
-            </section>
-            <p class="location">Chicago, IL - Location</p>
-            <p class="event">101WKQX TNWSC awith MUSE, Jungle and Barnes Courtney</p>
-            <button class="favorite">Save Event</button>
-        </section>
-        <section class="card">
-            <section class="date">
-                <p class="month-date">Dec 6</p>
-                <p class="day-time">7:00pm</p>
-            </section>
-            <p class="location">Chicago, IL - Location</p>
-            <p class="event">101WKQX TNWSC awith MUSE, Jungle and Barnes Courtney</p>
-            <button class="favorite">Save Event</button>
-        </section>
-        <section class="card">
-            <section class="date">
-                <p class="month-date">Dec 6</p>
-                <p class="day-time">7:00pm</p>
-            </section>
-            <p class="location">Chicago, IL - Location</p>
-            <p class="event">101WKQX TNWSC awith MUSE, Jungle and Barnes Courtney</p>
-            <button class="favorite">Save Event</button>
-        </section>
-        <section class="card">
-            <section class="date">
-                <p class="month-date">Dec 6</p>
-                <p class="day-time">7:00pm</p>
-            </section>
-            <p class="location">Chicago, IL - Location</p>
-            <p class="event">101WKQX TNWSC awith MUSE, Jungle and Barnes Courtney</p>
-            <button class="favorite">Save Event</button>
-        </section>
+    <section class="toggle-container">
+        <a class="toggle-events" href="#!/bucket-list">Bucket List</a>
     </section>
+    <section class="card" ng-repeat="event in receivedData track by $index">
+        <section class="date">
+            <p class="month-date">Dec 6</p>
+            <p class="day-time">7:00pm</p>
+        </section>
+        <p class="location">Chicago, IL - Location</p>
+        <p class="event">{{ event.name}}}</p>
+        <button class="favorite">Save Event</button>
+    </section>
+</section>

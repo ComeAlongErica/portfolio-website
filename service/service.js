@@ -8,15 +8,18 @@ function EventService($location, $http) {
     self.submitData = (search) => {
         searchResults = search;
         self.searchTicketMaster(search);
+        $location.path("/search");
         // console.log(searchResults);
     };
-
+    self.returnData = () => {
+        return jsonPayload;
+    }
     self.searchTicketMaster = (data) => {
         let day = data.localDate.getDate();
         let month = `${data.localDate.getMonth() + 1}`;
         let year = data.localDate.getFullYear();
         
-        console.log(month, day, year);
+        // console.log(month, day, year);
 
         // console.log("You're in api")
         // console.log(data.searchKeyword);
@@ -29,13 +32,12 @@ function EventService($location, $http) {
             url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${data.searchKeyword}&postalCode=${data.postalCode}&localDate=${year}-${month}-${day}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
         }).then((data) => {
             // This method is what is used to get data from the promise once it has been resolved
-            jsonPayload = data;
+             jsonPayload = data.data._embedded.events;
             console.log(jsonPayload)
             // Returns the jsonPayload variable
-            return jsonPayload;
+            // return jsonPayload;
         });
     }
-
 
 };
 angular
