@@ -16,10 +16,16 @@ function EventService($location, $http) {
         self.searchTicketMasterDefined(search);
     };
 
-    // //returns data for event search page
-    // self.returnBucketList = () => {
-    //     // return self.bucketList;
-    // }
+    //returns data for event search page
+    self.returnData = () => {
+        console.log(self.jsonPayload);
+        return self.jsonPayload;
+    }
+
+    //returns data for event search page
+    self.returnBucketList = () => {
+        return self.bucketList;
+    }
 
     // navigates home when logo is clicked
     self.routeHome = () => {
@@ -27,14 +33,13 @@ function EventService($location, $http) {
     };
 
     //saves event to bucket list
-    self.saveBucket = (saveEvent) => {
+    self.saveBucketList = (saveEvent) => {
         console.log(saveEvent);
         self.bucketList.push(saveEvent);
     };
 
     //API Request
     self.searchTicketMaster = (search) => {
-        console.log(search);
         let day = search.localDate.getDate();
         let month = `${search.localDate.getMonth() + 1}`;
         let year = search.localDate.getFullYear();
@@ -44,10 +49,8 @@ function EventService($location, $http) {
             url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${search.searchKeyword}&postalCode=${search.postalCode}&localDate=${year}-${month}-${day}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
         }).then((data) => {
             // This method is what is used to get data from the promise once it has been resolved
-            // console.log(data.data._embedded.events);
             self.jsonPayload = data.data._embedded.events;
             $location.path("/event-list");
-            return self.jsonPayload;
         });
     }
 
@@ -63,15 +66,8 @@ function EventService($location, $http) {
             // console.log(data.data._embedded.events);
             self.jsonPayload = data.data._embedded.events;
             $location.path("/event-list");
-            return self.jsonPayload;
         });
     }
-
-        //returns data for event search page
-        self.returnData = () => {
-            console.log(self.jsonPayload);
-            return self.jsonPayload;
-        }
 
 };
 angular
