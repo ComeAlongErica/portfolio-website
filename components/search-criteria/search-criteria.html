@@ -3,7 +3,7 @@
 </section>
 <section class="search-container">
     <header>
-        <p class="logo"><span>Event</span>Scout</p>
+        <p ng-click="$ctrl.navHome();" class="logo"><span>Event</span>Scout</p>
     </header>
     <section class="search-body-container">
     <section>
@@ -18,7 +18,6 @@
             <input ng-model="search.localDate" class="search-input" type="date">
             <button class="search-button">Submit</button>
         </form>
-        <event-list></event-list>
     </section>
     </section>
 </section>

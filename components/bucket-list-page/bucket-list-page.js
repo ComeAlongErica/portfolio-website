@@ -5,7 +5,9 @@ const bucketList = {
     bindings: {},
     controller: [function() {
         const vm = this;
-        //code here por favor
+        //recieves bucket list
+        // vm.recieveBucket = EventService.returnBucket();
+
     }]
     
 }
