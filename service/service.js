@@ -12,9 +12,11 @@ function EventService($location, $http) {
     };
 
     self.searchTicketMaster = (data) => {
-        console.log(search.localDate.getFullYear());
-        console.log(search.localDate.getDate());
-        console.log(search.localDate.getMonth() + 1);
+        let day = data.localDate.getDate();
+        let month = `${data.localDate.getMonth() + 1}`;
+        let year = data.localDate.getFullYear();
+        
+        // console.log(month, day, year);
 
         // console.log("You're in api")
         // console.log(data.searchKeyword);
@@ -24,7 +26,7 @@ function EventService($location, $http) {
         return $http({
             method: "GET", // Defines the method
 
-            url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${searchKeyword}&postalCode=${postalCode}&localDate=${localDate}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
+            url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${data.searchKeyword}&postalCode=${data.postalCode}&localDate=${day+month+year}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
         }).then((data) => {
             // This method is what is used to get data from the promise once it has been resolved
             jsonPayload = data;
