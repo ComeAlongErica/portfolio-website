@@ -9,9 +9,13 @@ const eventList = {
 
         // sends event to save in array
         vm.saveEvent = (event) => {
-            console.log(event);
-            EventService.saveBucket(event);
+            EventService.saveBucketList(event);
         }
+
+        // navigates home
+        vm.navHome = () => {
+            EventService.routeHome();
+        };
     }]
     
 }
