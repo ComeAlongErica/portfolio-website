@@ -6,8 +6,12 @@ const eventList = {
     controller: ["EventService", function(EventService){
         const vm = this;
         vm.receivedData = EventService.returnData();
-        
-        console.log(vm.receivedData);
+
+        // sends event to save in array
+        vm.saveEvent = (event) => {
+            console.log(event);
+            EventService.saveBucket(event);
+        }
     }]
     
 }
