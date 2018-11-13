@@ -9,13 +9,11 @@ function EventService($location, $http) {
     // recieves data from search and sends to API
     self.submitData = (search) => {
         self.searchTicketMaster(search);
-        $location.path("/event-list");
     };
 
     // recieves defined data from search and sends to defined API
     self.submitDataDefined = (search) => {
         self.searchTicketMasterDefined(search);
-        $location.path("/event-list");
     };
 
     // //returns data for event search page
@@ -48,6 +46,7 @@ function EventService($location, $http) {
             // This method is what is used to get data from the promise once it has been resolved
             // console.log(data.data._embedded.events);
             self.jsonPayload = data.data._embedded.events;
+            $location.path("/event-list");
             return self.jsonPayload;
         });
     }
@@ -63,6 +62,7 @@ function EventService($location, $http) {
             // This method is what is used to get data from the promise once it has been resolved
             // console.log(data.data._embedded.events);
             self.jsonPayload = data.data._embedded.events;
+            $location.path("/event-list");
             return self.jsonPayload;
         });
     }
