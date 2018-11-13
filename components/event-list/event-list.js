@@ -5,9 +5,9 @@ const eventList = {
     bindings: {},
     controller: ["EventService", function(EventService){
         const vm = this;
-        let receivedData = EventService.returnData();
-        console.log(receivedData);
+        vm.receivedData = EventService.returnData();
         
+        console.log(vm.receivedData);
     }]
     
 }
