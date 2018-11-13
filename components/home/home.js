@@ -8,9 +8,6 @@ const home = {
 
         //sends data to service
         vm.passSearch = (search) => {
-            // console.log(search.localDate.getFullYear());
-            // console.log(search.localDate.getDate());
-            // console.log(search.localDate.getMonth() + 1);
             EventService.submitData(search);
         };
     }]

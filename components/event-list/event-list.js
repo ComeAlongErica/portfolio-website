@@ -3,9 +3,11 @@
 const eventList = {
     templateUrl: "components/event-list/event-list.html",
     bindings: {},
-    controller: [ function(){
+    controller: ["EventService", function(EventService){
         const vm = this;
-        //code here por favor
+        let receivedData = EventService.returnData();
+        console.log(receivedData);
+        
     }]
     
 }
