@@ -1,7 +1,7 @@
 "use strict";
 
 const eventList = {
-    template: `<h1>This is event list of results</h1>`,
+    templateUrl: "components/event-list/event-list.html",
     bindings: {},
     controller: [ function(){
         const vm = this;

@@ -1,7 +1,7 @@
 "use strict";
 
 const bucketList = {
-    template: `<h1>This is bucket list page, aka favorites</h1>`,
+    templateUrl: "components/bucket-list-page/bucket-list-page.html",
     bindings: {},
     controller: [function() {
         const vm = this;

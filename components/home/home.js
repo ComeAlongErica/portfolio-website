@@ -3,9 +3,12 @@
 const home = {
     templateUrl: "components/home/home.html",
     bindings: {},
-    controller: [ function(){
+    controller: ["Service", function(Service) {
         const vm = this;
         //code here por favor
+        vm.passSearch = (search) => {
+            console.log(search);
+        }
     }]
     
 };
@@ -13,4 +16,4 @@ const home = {
 
 angular
     .module("App")
-    .component("home",home);
+    .component("home", home);

@@ -11,10 +11,10 @@
             Find,
             Connect.
         </h1>
-        <form>
-            <input class="home-input" type="text" placeholder="Search event...">
-            <input class="home-input" type="text" placeholder="ZIP code">
-            <input class="home-input" type="date">
+        <form ng-submit="$ctrl.passSearch(search);" class="home-form">
+            <input ng-model="search.searchKeyword" class="home-input" type="text" placeholder="Search event...">
+            <input ng-model="search.postalCode" class="home-input" type="text" placeholder="ZIP code">
+            <input ng-model="search.localDate" class="home-input" type="date">
             <button class="home-button">Submit</button>
         </form>
         <h2>I'm feeling...</h2>
