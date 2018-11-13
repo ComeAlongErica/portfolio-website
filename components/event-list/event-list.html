@@ -4,10 +4,10 @@
     </section>
     <section class="card" ng-repeat="event in $ctrl.receivedData track by $index">
         <section class="date">
-            <p class="month-date">{{ event.date }}<</p>
+            <p class="month-date">{{ event.dates.start.localDate }}</p>
         </section>
-        <p class="location">Chicago, IL - Location</p>
-        <p class="event">{{ event.event }}</p>
+        <p class="location">{{ event._embedded.venues["0"].name }}</p>
+        <p class="event">{{ event.name }}</p>
         <button class="favorite">Save Event</button>
     </section>
 </section>
