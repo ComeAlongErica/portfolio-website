@@ -3,12 +3,16 @@
 const home = {
     templateUrl: "components/home/home.html",
     bindings: {},
-    controller: ["Service", function(Service) {
+    controller: ["EventService", function(EventService) {
         const vm = this;
-        //code here por favor
+
+        //sends data to service
         vm.passSearch = (search) => {
-            console.log(search);
-        }
+            // console.log(search.localDate.getFullYear());
+            // console.log(search.localDate.getDate());
+            // console.log(search.localDate.getMonth() + 1);
+            EventService.submitData(search);
+        };
     }]
     
 };

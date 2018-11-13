@@ -109,10 +109,10 @@ h2 {
 .suggest {
     margin: 5px;
     padding: 10px;
-    color: rgb(236, 91, 51);
-    border: 1px solid rgba(236, 91, 51, .6);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, .65);
     border-radius: 100px;
-    background-color: rgba(223, 220, 227, .8);
+    background-color: rgba(223, 220, 227, .2);
     transition: 0.3s;
 }
 
