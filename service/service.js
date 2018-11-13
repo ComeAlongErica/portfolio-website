@@ -23,9 +23,9 @@ function EventService($location, $http) {
             url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${search.searchKeyword}&postalCode=${search.postalCode}&localDate=${year}-${month}-${day}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
         }).then((data) => {
             // This method is what is used to get data from the promise once it has been resolved
-            console.log(data);
-            
-            self.jsonPayload = data;
+            // console.log(data.data._embedded.events);
+            console.log(data.data._embedded.events);
+            self.jsonPayload = data.data._embedded.events;
             return self.jsonPayload;
         });
     }
