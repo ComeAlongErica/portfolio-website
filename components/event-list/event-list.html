@@ -1,28 +1,3 @@
-<section class="section-container">
-    <section class="toggle-container">
-        <a class="toggle-events" href="#!/bucket-list">Bucket List</a>
-    </section>
-    <section class="card" ng-repeat="event in $ctrl.receivedData track by $index">
-        <section class="date">
-            <p class="month-date">{{ event.dates.start.localDate }}</p>
-        </section>
-        <p class="location">{{ event._embedded.venues["0"].name }}</p>
-        <p class="event">{{ event.name }}</p>
-        <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
-        <button ng-click="$ctrl.toggleExtended($index)">show details</button>
-        <section class="extended-info" ng-show="$ctrl.showExtended">
-            <!-- <p>{{ $index.event.name }}</p> -->
-            <p>{{ $index }}</p>
-
-
-            <p>{{ event.accessibility.info}}</p>
-            console.log("tdst");
-            <a class="event" ng-href={{event.url}}>Link to Ticketmaster</a>
-        </section>
-
-    </section>
-</section>
-
 <section class="search-img">
     <section class="search-overlay"></section>
 </section>
@@ -43,6 +18,29 @@
                 <input ng-model="search.localDate" class="search-input" type="date">
                 <button class="search-button">Submit</button>
             </form>
+        </section>
+    </section>
+</section>
+<section class="section-container">
+    <section class="toggle-container">
+        <a class="toggle-events" href="#!/bucket-list">Bucket List</a>
+    </section>
+    <section class="card" ng-repeat="event in $ctrl.receivedData track by $index">
+        <section class="date">
+            <p class="month-date">{{ event.dates.start.localDate }}</p>
+        </section>
+        <p class="location">{{ event._embedded.venues["0"].name }}</p>
+        <p class="event">{{ event.name }}</p>
+        <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
+            <button ng-click="$ctrl.toggleExtended($index)">show details</button>
+        <section class="extended-info" ng-show="$ctrl.showExtended">
+            <!-- <p>{{ $index.event.name }}</p> -->
+            <p>{{ $index }}</p>
+
+
+            <p>{{ event.accessibility.info}}</p>
+            console.log("tdst");
+            <a class="event" ng-href={{event.url}}>Link to Ticketmaster</a>
         </section>
     </section>
 </section>
