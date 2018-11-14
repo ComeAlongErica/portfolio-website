@@ -9,6 +9,17 @@
         <p class="location">{{ event._embedded.venues["0"].name }}</p>
         <p class="event">{{ event.name }}</p>
         <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
+        <button ng-click="$ctrl.toggleExtended($index)">show details</button>
+        <section class="extended-info" ng-show="$ctrl.showExtended">
+            <!-- <p>{{ $index.event.name }}</p> -->
+            <p>{{ $index }}</p>
+
+
+            <p>{{ event.accessibility.info}}</p>
+            console.log("tdst");
+            <a class="event" ng-href={{event.url}}>Link to Ticketmaster</a>
+        </section>
+
     </section>
 </section>
 

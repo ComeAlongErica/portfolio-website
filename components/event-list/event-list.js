@@ -12,6 +12,24 @@ const eventList = {
             console.log(event);
             EventService.saveBucket(event);
         }
+
+        vm.showExtended = false;
+        vm.toggleExtended = (event) => {
+            console.log(event);
+            console.log(vm.showExtended);
+            console.log("event: " + event.id)
+            console.log("event: " + event.name)
+            
+
+            if (vm.showExtended) {
+                vm.showExtended = false;
+                console.log("set to false");
+            } else if (vm.showExtended === false) {
+                vm.showExtended = true;
+                console.log("set to true");
+
+            }
+        }
     }]
     
 }
