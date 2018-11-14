@@ -23,6 +23,7 @@
 </section>
 <section class="section-container">
     <section class="toggle-container">
+        <p class="displaying">Displaying {{ $ctrl.recieveBucket.length }} results...</p>
         <a class="toggle-events" href="#!/event-list">Event List</a>
     </section>
     <section class="card" ng-repeat="event in $ctrl.recieveBucket track by $index">
