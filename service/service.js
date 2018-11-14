@@ -2,23 +2,22 @@
 
 function EventService($location, $http) {
     const self = this;
-    self.jsonPayload = [];
+    // self.jsonPayload = [];
     self.bucketList = [];
 
 
     // recieves data from search and sends to API
     self.submitData = (search) => {
-        self.searchTicketMaster(search);
+        return self.searchTicketMaster(search);
     };
 
     // recieves defined data from search and sends to defined API
     self.submitDataDefined = (search) => {
-        self.searchTicketMasterDefined(search);
+        return self.searchTicketMasterDefined(search);
     };
 
     //returns data for event search page
     self.returnData = () => {
-        console.log(self.jsonPayload);
         return self.jsonPayload;
     }
 
@@ -34,8 +33,13 @@ function EventService($location, $http) {
 
     //saves event to bucket list
     self.saveBucketList = (saveEvent) => {
-        console.log(saveEvent);
         self.bucketList.push(saveEvent);
+    };
+
+    //removes event from bucket list
+    self.removeBucket = (removeEvent) => {
+        let index = self.bucketList.indexOf(removeEvent);
+        self.bucketList.splice(index, 1);
     };
 
     //API Request
@@ -57,7 +61,6 @@ function EventService($location, $http) {
     //Pres Defined API Request
     //API Request
     self.searchTicketMasterDefined = (search) => {
-        console.log(search);
         return $http({
             method: "GET", // Defines the method
             url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${search.searchKeyword}&postalCode=${search.postalCode}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL

@@ -12,6 +12,14 @@ const eventList = {
             EventService.routeHome();
         };
       
+        //sends search
+        vm.passSearch = (search) => {
+            EventService.submitData(search).then(() => {
+                vm.receivedData = EventService.returnData();
+            });
+        };
+      
+
         // sends event to save in array
         vm.saveEvent = (event) => {
             EventService.saveBucketList(event);
