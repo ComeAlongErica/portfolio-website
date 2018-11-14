@@ -5,7 +5,7 @@ function expandOnClick() {
     restrict: "A",
     link: function($scope, $element, $attrs) {
       $element.on("click", () => {
-        $element[0].nextElementSibling.classList.remove("hidden");
+        $element[$index].nextElementSibling.classList.remove("hidden");
       });
     }
   };
