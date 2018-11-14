@@ -7,22 +7,41 @@ const eventList = {
         const vm = this;
         vm.receivedData = EventService.returnData();
 
+        // navigates home
+        vm.navHome = () => {
+            EventService.routeHome();
+        };
+      
         //sends search
         vm.passSearch = (search) => {
             EventService.submitData(search).then(() => {
                 vm.receivedData = EventService.returnData();
             });
         };
+      
 
         // sends event to save in array
         vm.saveEvent = (event) => {
             EventService.saveBucketList(event);
         }
 
-        // navigates home
-        vm.navHome = () => {
-            EventService.routeHome();
-        };
+        vm.showExtended = false;
+        vm.toggleExtended = (event) => {
+            console.log(event);
+            console.log(vm.showExtended);
+            console.log("event: " + event.id)
+            console.log("event: " + event.name)
+            
+
+            if (vm.showExtended) {
+                vm.showExtended = false;
+                console.log("set to false");
+            } else if (vm.showExtended === false) {
+                vm.showExtended = true;
+                console.log("set to true");
+
+            }
+        }
     }]
     
 }
