@@ -33,14 +33,20 @@
             </section>
             <p class="location">{{ event._embedded.venues["0"].name }}</p>
             <p class="event">{{ event.name }}</p>
-            <p expand-on-click ><i class="material-icons">keyboard_arrow_down</i></p>
+            <p expand-on-click><i class="material-icons">keyboard_arrow_down</i></p>
             <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
         </section>
         <section class="extended-info hidden">
-                <!-- <p>{{ event.start time}}</p> -->
-                <p>Tickets starting at: ${{ event.priceRanges["0"].min }}</p>
-                <a class="event" ng-href={{event.url}}>Buy Tickets Here</a>
-                <p>Address: {{ event._embedded.venues["0"].address.line1 }}, {{ event._embedded.venues["0"].city.name }}, {{ event._embedded.venues["0"].postalCode }}</p>
+            <section class="tickets">
+                <p class="ext-title">Ticket Info</p>
+                <p class="ext-event">Tickets starting at: ${{ event.priceRanges["0"].min }}</p>
+                <a class="ext-tickets" ng-href={{event.url}}>Buy Tickets Here</a>
+            </section>
+            <section class="address">
+                <p class="ext-title">Location Info</p>
+                <p class="ext-event">{{ event._embedded.venues["0"].address.line1 }},</p> 
+                <p class="ext-event">{{ event._embedded.venues["0"].city.name }}, {{ event._embedded.venues["0"].postalCode }}</p>
+            </section>
         </section>
     </section>
 </section>
