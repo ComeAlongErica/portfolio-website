@@ -19,7 +19,6 @@ const eventList = {
             });
         };
       
-
         // sends event to save in array
         vm.saveEvent = (event) => {
             EventService.saveBucketList(event);
