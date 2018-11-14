@@ -11,6 +11,7 @@ const eventList = {
         vm.navHome = () => {
             EventService.routeHome();
         };
+
       
         //sends search
         vm.passSearch = (search) => {
