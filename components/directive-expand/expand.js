@@ -5,7 +5,8 @@ function expandOnClick() {
     restrict: "A",
     link: function($scope, $element, $attrs) {
       $element.on("click", () => {
-        $element[$index].nextElementSibling.classList.remove("hidden");
+        console.log($element);
+        $element[0].nextElementSibling.classList.toggle("hidden");
       });
     }
   };
@@ -14,5 +15,3 @@ function expandOnClick() {
 angular
   .module("App")
   .directive("expandOnClick", expandOnClick);
-
-  //ng-show="$ctrl.showExtended"

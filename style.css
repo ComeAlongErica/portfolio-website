@@ -313,6 +313,10 @@ h2 {
     display: block;
 }
 
+.hidden {
+    display: none;
+}
+
 /* media query */
 
 @media screen and (max-width: 600px) {
@@ -349,8 +353,4 @@ h2 {
     /* home styling media query END */
   
 
-}
-
-.hidden {
-    display: none;
 }

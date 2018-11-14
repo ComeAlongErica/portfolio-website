@@ -27,16 +27,15 @@
         <a class="toggle-events" href="#!/bucket-list">Bucket List</a>
     </section>
     <section class="card" ng-repeat="event in $ctrl.receivedData track by $index">
-        <section class="flex-event">
+        <section expand-on-click class="flex-event">
             <section class="date">
                 <p class="month-date">{{ event.dates.start.localDate }}</p>
             </section>
             <p class="location">{{ event._embedded.venues["0"].name }}</p>
             <p class="event">{{ event.name }}</p>
             <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
-            <button ng-click="$ctrl.toggleExtended($index)">show details</button>
         </section>
-        <section class="extended-info" ng-show="$ctrl.showExtended">
+        <section class="extended-info hidden">
             <!-- <p>{{ $index.event.name }}</p> -->
             <p>{{ $index }}</p>
             <p>{{ event.accessibility.info}}</p>
