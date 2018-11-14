@@ -33,8 +33,13 @@ function EventService($location, $http) {
 
     //saves event to bucket list
     self.saveBucketList = (saveEvent) => {
-        console.log(saveEvent);
         self.bucketList.push(saveEvent);
+    };
+
+    //removes event from bucket list
+    self.removeBucket = (removeEvent) => {
+        let index = self.bucketList.indexOf(removeEvent);
+        self.bucketList.splice(index, 1);
     };
 
     //API Request
@@ -61,7 +66,7 @@ function EventService($location, $http) {
             url: `http://app.ticketmaster.com/discovery/v2/events.json?keyword=${search.searchKeyword}&postalCode=${search.postalCode}&apikey=ibBJCTVGbVNR0NGGSUX7I2MLXS17aVQH` // Defines the URL
         }).then((data) => {
             // This method is what is used to get data from the promise once it has been resolved
-            console.log(data.data._embedded.events);
+            // console.log(data.data._embedded.events);
             self.jsonPayload = data.data._embedded.events;
             $location.path("/event-list");
         });

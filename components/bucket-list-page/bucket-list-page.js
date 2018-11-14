@@ -17,6 +17,11 @@ const bucketList = {
         vm.navHome = () => {
             EventService.routeHome();
         };
+
+        //removes event
+        vm.removeEvent = (event) => {
+            EventService.removeBucket(event);
+        };
     }]
     
 }
