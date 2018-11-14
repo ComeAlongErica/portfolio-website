@@ -31,9 +31,9 @@
             <section class="date">
                 <p class="month-date">{{ event.dates.start.localDate }}</p>
             </section>
-            <p class="location">{{ event._embedded.venues["0"].name }}</p>
-            <p class="event">{{ event.name }}</p>
-            <button ng-click="$ctrl.removeEvent(event);" class="favorite">Remove Event</button>
+        <p class="location">{{ event._embedded.venues["0"].name }}</p>
+        <p class="event">{{ event.name }}</p>
+        <p ng-click="$ctrl.removeEvent($index)"><i class="material-icons">close</i></p>
         </section>
         <section class="extended-info hidden">
             <!-- <p>{{ $index.event.name }}</p> -->
