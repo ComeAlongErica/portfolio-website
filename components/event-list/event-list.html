@@ -36,11 +36,10 @@
             <button ng-click="$ctrl.saveEvent(event);" class="favorite">Save Event</button>
         </section>
         <section class="extended-info hidden">
-            <!-- <p>{{ $index.event.name }}</p> -->
-            <p>{{ $index }}</p>
-            <p>{{ event.accessibility.info}}</p>
-            console.log("tdst");
-            <a class="event" ng-href={{event.url}}>Link to Ticketmaster</a>
+                <!-- <p>{{ event.start time}}</p> -->
+                <p>Tickets starting at: ${{ event.priceRanges["0"].min }}</p>
+                <a class="event" ng-href={{event.url}}>Buy Tickets Here</a>
+                <p>Address: {{ event._embedded.venues["0"].address.line1 }}, {{ event._embedded.venues["0"].city.name }}, {{ event._embedded.venues["0"].postalCode }}</p>
         </section>
     </section>
 </section>
