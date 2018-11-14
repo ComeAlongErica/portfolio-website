@@ -242,13 +242,26 @@ i:hover {
     transition: 0.3s;
 }
 
-.toggle-events:hover {
+.ext-title {
+    color: grey;
+    font-family: 'Zilla Slab', serif;    
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.ext-tickets {
+    text-decoration: none;
+    color: rgb(236, 91, 51);
+    font-family: 'Zilla Slab', serif;    
+    font-weight: 700;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.toggle-events:hover, .ext-tickets:hover {
     color: rgb(247, 183, 51);
 }
 
-/* .material-icons {
-    position: absolute;
-    right: 575px; */
 
 /* search styling */
 /* img cover */
@@ -327,8 +340,22 @@ i:hover {
 
 /* Styling for see more info */
 .extended-info {
-    display: block;
+    margin: 0 20px;
+    border-top: 1px dotted rgb(211, 208, 208);
+    display: flex;
+    justify-content: space-around;
 }
+
+.address, .tickets {
+    width: 40%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.ext-event {
+    margin: 5px 0 20 0;
+    font-size: 12px;
+} 
 
 .hidden {
     display: none;

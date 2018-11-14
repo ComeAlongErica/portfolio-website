@@ -21,6 +21,7 @@ const eventList = {
 
         // sends event to save in array
         vm.saveEvent = (event) => {
+            console.log(event);
             EventService.saveBucketList(event);
         }
 
