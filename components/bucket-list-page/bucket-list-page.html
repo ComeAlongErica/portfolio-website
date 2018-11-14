@@ -27,13 +27,14 @@
         <a class="toggle-events" href="#!/event-list">Event List</a>
     </section>
     <section class="card" ng-repeat="event in $ctrl.recieveBucket track by $index">
-        <section expand-on-click class="flex-event">
+        <section class="flex-event">
             <section class="date">
                 <p class="month-date">{{ event.dates.start.localDate }}</p>
             </section>
         <p class="location">{{ event._embedded.venues["0"].name }}</p>
         <p class="event">{{ event.name }}</p>
-        <p ng-click="$ctrl.removeEvent($index)"><i class="material-icons">close</i></p>
+        <p expand-on-click ><i class="material-icons">keyboard_arrow_down</i></p>
+        <i ng-click="$ctrl.removeEvent($index)" class="material-icons">close</i>
         </section>
         <section class="extended-info hidden">
             <!-- <p>{{ $index.event.name }}</p> -->
