@@ -83,13 +83,11 @@ h1 {
     color: white;
     width: 230px;
     height: 55px;
-    box-shadow: inset 0 0 0 0 rgb(247, 183, 51);
-    transition: ease-out 1s;
+    transition-duration: 0.8s;
 }
 
 .home-button:hover {
     background-color: rgb(247, 183, 51);
-    box-shadow: inset 400px 0 0 0 rgb(247, 183, 51);
     cursor: pointer;
 }
 
@@ -116,8 +114,8 @@ h2 {
     border: 1px solid rgba(255, 255, 255, .65);
     border-radius: 100px;
     background-color: rgba(223, 220, 227, .2);
-    box-shadow: inset 0 0 0 0 rgb(247, 183, 51);
-    transition: ease-out 1s;
+    transition-duration: 0.8s;
+
 }
 
 .suggest:hover {
@@ -125,7 +123,6 @@ h2 {
     color: rgb(223, 220, 227);
     border: 1px solid rgba(247, 183, 51, .6);
     background-color: rgba(247, 183, 51, .8);
-    box-shadow: inset 400px 0 0 0 rgba(247, 183, 51, .8);
     cursor: pointer;
 }
 
@@ -134,12 +131,21 @@ h2 {
 /* event and bucket list styling BEGIN */
 .section-container {
     position: absolute;
-    top: 370px;
+    top: 380px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.displaying {
+    margin: 0;
+    text-decoration: none;
+    position: absolute;
+    left: 0;
+    font-size: 13px;
+    transition: 0.3s;
 }
 
 .card {
@@ -148,14 +154,17 @@ h2 {
     border-bottom: 1px solid rgb(204, 209, 208);
     border-right: 1px solid rgb(233, 238, 237);
     border-radius: 5px;
+    width: 80%;
+    min-height: 125px;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.flex-event {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
-    height: 125px;
-    margin: 5px 0;
-    transition: 0.3s;
 }
 
 .card:hover {
@@ -190,7 +199,7 @@ h2 {
     height: 45px;
     margin: 0 15px 0 5px;
     background-color: rgb(236, 91, 51);
-    transition: 0.3s;
+    transition-duration: 0.8s;
     color: white;
     border-radius: 100px;
     border: none;
@@ -289,15 +298,18 @@ h2 {
     color: white;
     width: 170px;
     height: 43px;
-    box-shadow: inset 0 0 0 0 rgb(247, 183, 51);
-    transition: ease-out 1s;
+    transition-duration: 0.8s;
 }
 
 
 .search-button:hover {
     background-color: rgb(247, 183, 51);
-    box-shadow: inset 400px 0 0 0 rgb(247, 183, 51);
     cursor: pointer;
+}
+
+/* Styling for see more info */
+.extended-info {
+    display: block;
 }
 
 /* media query */
