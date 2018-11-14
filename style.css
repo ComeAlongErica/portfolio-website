@@ -161,6 +161,7 @@ h2 {
 }
 
 .flex-event {
+    height: 125px;
     display: flex;
     flex-direction: row;
     align-items: center;
