@@ -8,6 +8,11 @@ const bucketList = {
         //recieves bucket list
         vm.recieveBucket = EventService.returnBucketList();
 
+        //sends search
+        vm.passSearch = (search) => {
+            EventService.submitData(search);
+        };
+
         //navigates home when logo is clicked
         vm.navHome = () => {
             EventService.routeHome();
