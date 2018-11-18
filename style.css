@@ -2,13 +2,6 @@ body {
 font-family: 'Open Sans', sans-serif;
 }
 
-.routing {
-    z-index: 100;
-    position: absolute;
-    top: 0;
-    right: 0;
-}
-
 /* home styling BEGINS */
 /* img cover */
 .fullscreen {    
@@ -399,6 +392,7 @@ i:hover {
     }
 
     .search-img, .search-overlay {
+        width: 100%;
         height: 525px;
     }
 
