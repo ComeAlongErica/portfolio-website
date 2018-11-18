@@ -10,6 +10,9 @@ angular
         .when("/bucket-list", {
             template: "<bucket-list></bucket-list>"
         })
+        // .when("/search", {
+        //     template: "<search></search>"
+        // })
         .when("/event-list", {
             template: "<event-list></event-list>"
         })
