@@ -3,15 +3,18 @@
 const bucketList = {
     templateUrl: "components/bucket-list-page/bucket-list-page.html",
     bindings: {},
-    controller: ["EventService", function(EventService) {
+    controller: ["EventService", function (EventService) {
         const vm = this;
-        //recieves bucket list
-        vm.recieveBucket = EventService.returnBucketList();
 
         //sends search
         vm.passSearch = (search) => {
-            EventService.submitData(search);
+            EventService.submitData(search).then(() => {
+                vm.receivedData = EventService.returnData();
+            });
         };
+
+        //recieves bucket list
+        vm.recieveBucket = EventService.returnBucketList();
 
         //navigates home when logo is clicked
         vm.navHome = () => {
@@ -23,10 +26,10 @@ const bucketList = {
             EventService.removeBucket(event);
         };
     }]
-    
+
 }
 
 
 angular
     .module("App")
-    .component("bucketList",bucketList);
+    .component("bucketList", bucketList);

@@ -2,16 +2,10 @@
 
 const eventList = {
     templateUrl: "components/event-list/event-list.html",
-    bindings: {},
-    controller: ["EventService", function (EventService) {
+    controller: ["EventService", function (EventService, ) {
         const vm = this;
         vm.receivedData = EventService.returnData();
 
-        // navigates home
-        vm.navHome = () => {
-            EventService.routeHome();
-        };
-      
         //sends search
         vm.passSearch = (search) => {
             EventService.submitData(search).then(() => {
@@ -19,9 +13,13 @@ const eventList = {
             });
         };
 
+        // navigates home
+        vm.navHome = () => {
+            EventService.routeHome();
+        };
+
         // sends event to save in array
         vm.saveEvent = (event) => {
-            console.log(event);
             EventService.saveBucketList(event);
         }
 
