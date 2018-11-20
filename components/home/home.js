@@ -3,22 +3,12 @@
 const home = {
     templateUrl: "components/home/home.html",
     bindings: {},
-    controller: ["EventService", function(EventService) {
+    controller: ["PortService", function (PortService) {
         const vm = this;
 
-        //sends data to service
-        vm.passSearch = (search) => {
-            EventService.submitData(search);
-        };
-        //sends defined data
-        vm.passDefined = (search) => {
-            EventService.submitDataDefined(search);
-        };
     }]
-    
+
 };
 
 
-angular
-    .module("App")
-    .component("home", home);
+angular.module("Portfolio").component("home", home);
