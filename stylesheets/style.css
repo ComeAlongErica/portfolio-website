@@ -9,11 +9,38 @@ header {
     height: 80px;
 }
 
+.top-line {
+    position: absolute;
+    top: 0;
+    height: 5px;
+    width: 100vw;
+    background-color: #608CB0;
+}
+
+.social-icons {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+i {
+    color: #608CB0;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+
+i:hover {
+    color: rgb(184, 123, 11);
+    cursor: pointer;
+}
+
 a {
     text-decoration: none;
     letter-spacing: 1px;
     margin-left: 20px;
     color: #608CB0;
+    transition: 0.3s;
 }
 
 a:hover {
@@ -147,7 +174,7 @@ button:hover {
     }
 
     .home-body {
-        margin: 0;
+        margin: 0 auto;
         flex-grow: 1;
         height: 100vh;
         width: 100vw;
