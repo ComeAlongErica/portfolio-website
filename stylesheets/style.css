@@ -1,0 +1,136 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #1F292C;
+}
+
+header { 
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+}
+
+a {
+    text-decoration: none;
+    letter-spacing: 1px;
+    margin-left: 20px;
+    color: #608CB0;
+}
+
+a:hover {
+    color: rgb(184, 123, 11);
+    font-weight: 500;
+}
+
+
+.logo {
+    padding: 20px;
+    height: 40px;
+}
+.nav {
+    margin: 20px;
+}
+
+.home-container {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(247, 247, 247);
+}
+
+.home-body {
+    margin: 0;
+    width: 60%;
+    height: 100vh;
+}
+
+.greeting {
+    margin: 30px 100px;
+    width: 600px;
+}
+
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 125px;
+    margin: 50px 0 30px 0;
+}
+
+.smaller {
+    font-size: 50px;
+    display: block;
+}
+
+.body-text{
+    line-height: 25px;
+    margin-bottom: 20px;
+}
+
+.color1, .color2, .color3, .color4, .color5, .color6, .color7, .color8, .color9 {
+    transition: color 0.3s ease;
+}
+.color1:hover {
+    color: rgb(31, 197, 142);
+    cursor: default;
+}
+.color2:hover {
+    color: rgb(44, 212, 184);
+    cursor: default;
+}
+.color3:hover {
+    color: rgb(46, 209, 209);
+    cursor: default;
+}
+.color4:hover {
+    color: rgb(70, 123, 192);
+    cursor: default;
+}
+.color5:hover {
+    color: #3879B1;
+    cursor: default;
+}
+.color6:hover {
+    color: #009CAD;
+    cursor: default;
+}
+.color7:hover {
+    color: #00B697;
+    cursor: default;
+}
+.color8:hover {
+    color: #00C884;
+    cursor: default;
+}
+.color9:hover {
+    color: #C6C600;
+    cursor: default;
+}
+
+.image-container {
+    position: absolute;
+    right: 0;
+    margin: 0;
+    max-width: 500px;
+    width: 40%;
+    height: 100vh;
+    background-image: url("../images/justcompandcoffee.svg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+}
+
+button {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 200px;
+    padding: 15px;
+    color: #608CB0;
+    border: 3px solid #608CB0;
+    background-color: rgb(247, 247, 247);
+    box-shadow: inset 0 0 0 0 #608CB0;
+    transition: ease-out 0.4s;
+}
+
+button:hover {
+    color: rgb(247, 247, 247);
+    cursor: pointer;
+    background-color: #608CB0;
+    box-shadow: inset 0 100px 0 0 #608CB0;
+}
