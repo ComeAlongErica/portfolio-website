@@ -45,9 +45,9 @@ header {
 }
 
 .social-icons {
-    position: absolute;
+    /* position: absolute;
     bottom: 20px;
-    left: 20px;
+    left: 20px; */
 }
 
 i {
@@ -236,7 +236,7 @@ button:hover {
     
 }
 
-@media only screen and (max-width: 407px) {
+@media only screen and (max-width: 500px) {
     .greeting {
         margin: 20px 30px;
     }
