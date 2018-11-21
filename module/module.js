@@ -1,7 +1,7 @@
 "use strict";
 
 angular
-    .module("Portfolio", ["ngRoute"])
+    .module("Portfolio", ["ngRoute", "ngAnimate"])
     .config(["$routeProvider", ($routeProvider) => {
         $routeProvider
         .when("/home", {

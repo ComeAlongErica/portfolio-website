@@ -5,10 +5,11 @@ const headerTool = {
     bindings: {},
     controller: ["PortService", function (PortService) {
         const vm = this;
-
+ 
     }]
 
 };
 
+//$location.path("/event-list");
 
 angular.module("Portfolio").component("headerTool", headerTool);
