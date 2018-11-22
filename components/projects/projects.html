@@ -1,0 +1,15 @@
+<section class="home-container">
+    <section class="home-body">
+        <header-tool></header-tool>
+        <section class="greeting">
+            <h1><span class="smaller">Projects</span></h1>
+            <section class="project-container">
+                <section class="project-display" ng-repeat="project in $ctrl.projectDisplay track by $index">
+                    <a ng-href="{{project.url}}" target="_blank"> <img class="project-img" ng-src="{{project.img}}"></a>
+                </section>
+            </section>
+        </section>
+    </section>
+    <section class="image-container">
+    </section>
+</section>
