@@ -69,7 +69,7 @@ i:hover {
     cursor: pointer;
 }
 
-a {
+.navlink {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
@@ -80,7 +80,7 @@ a {
     font-weight: 500;
 }
 
-a:hover {
+.navlink:hover {
     color: #608CB0;
     text-decoration: underline;
 }
@@ -224,7 +224,7 @@ button:hover {
 .project-img {
     display: inline-block;
     margin-left: -10px;
-    max-width: 100%;
+    max-width: 105%;
 }
 
 
@@ -267,6 +267,10 @@ button:hover {
         display: block;
     }
     
+    .project-img {
+        display: inline-block;
+    }
+
 }
 
 @media only screen and (max-width : 736px) {
@@ -291,6 +295,12 @@ button:hover {
 
     button {
         width: 100%;
+    }
+
+    .project-img {
+        display: inline-block;
+        margin-left: -18px;
+        max-width: 120%;
     }
 }
 
@@ -324,5 +334,11 @@ button:hover {
      a {
          padding: 20px;
      }
+
+     .project-img {
+        display: inline-block;
+        margin-left: -20px;
+        max-width: 100%;
+    }
      
 }
