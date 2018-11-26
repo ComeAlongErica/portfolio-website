@@ -257,13 +257,12 @@ button:hover {
 }
 
 .hide {
-    display: none;
-    transition: 1s  all;
-
+    /* display: none; */
+    opacity: 0;
 }
 
 .overlay {
-    transition: 1s  all;
+    transition: all .3s linear;
     background-color: rgba(31, 41, 44, .8);
     height: 150px;
     width: 100%;
@@ -275,8 +274,8 @@ button:hover {
 
 .project-info {
     position: absolute;
-    bottom: 0;
-    padding: 15px;
+    top: 0;
+    margin: 30px 10px;
 }
 
 .project-name {
