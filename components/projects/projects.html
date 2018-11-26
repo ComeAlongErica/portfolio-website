@@ -5,7 +5,7 @@
             <h1><span class="smaller">Projects</span></h1>
             <section class="project-container">
                 <section class="project-display" ng-repeat="project in $ctrl.projectDisplay track by $index">
-                    <a ng-href="{{project.url}}" target="_blank"> <img class="project-img" ng-src="{{project.img}}"></a>
+                    <a class="img-link" ng-href="{{project.url}}" target="_blank"> <img class="project-img" ng-src="{{project.img}}"></a>
                 </section>
             </section>
         </section>

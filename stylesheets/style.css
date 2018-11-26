@@ -234,9 +234,11 @@ button:hover {
 }
 
 .project-img {
-    display: inline-block;
-    margin-left: -10px;
-    max-width: 105%;
+    max-width: 100%;
+}
+
+.img-link {
+    margin: 0;
 }
 
 
@@ -278,10 +280,6 @@ button:hover {
         font-size: 50px;
         display: block;
     }
-    
-    .project-img {
-        display: inline-block;
-    }
 
 }
 
@@ -309,11 +307,6 @@ button:hover {
         width: 100%;
     }
 
-    .project-img {
-        display: inline-block;
-        margin-left: -18px;
-        max-width: 120%;
-    }
 }
 
 @media only screen and (max-width : 500px) {
@@ -343,14 +336,8 @@ button:hover {
         display: flex;
         flex-direction: column;
     }
-     a {
+     .navlink {
          padding: 20px;
      }
-
-     .project-img {
-        display: inline-block;
-        margin-left: -20px;
-        max-width: 100%;
-    }
      
 }
