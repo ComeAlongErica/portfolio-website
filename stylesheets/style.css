@@ -220,7 +220,8 @@ button:hover {
 }
 
 .project-display {
-    text-align:center;
+    position: relative;
+    text-align: center;
     overflow: hidden;
     margin: 10px;
     width: 250px;
@@ -241,6 +242,23 @@ button:hover {
     margin: 0;
 }
 
+.hide {
+    transition:0.5s linear all;
+    height: 0px;
+    opacity:0;
+}
+
+.overlay {
+    display: block;
+    transition:0.25s linear all;
+    background-color: rgba(31, 41, 44, .5);
+    height: 150px;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 @media only screen and (max-width: 971px) {
 

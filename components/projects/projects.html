@@ -4,8 +4,9 @@
         <section class="greeting">
             <h1><span class="smaller">Projects</span></h1>
             <section class="project-container">
-                <section class="project-display" ng-repeat="project in $ctrl.projectDisplay track by $index">
+                <section dom-fun class="project-display" ng-repeat="project in $ctrl.projectDisplay track by $index">
                     <a class="img-link" ng-href="{{project.url}}" target="_blank"> <img class="project-img" ng-src="{{project.img}}"></a>
+                    <section class="overlay hide">{{project.name}}</section>
                 </section>
             </section>
         </section>
