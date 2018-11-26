@@ -5,8 +5,14 @@
             <h1><span class="smaller">Projects</span></h1>
             <section class="project-container">
                 <section dom-fun class="project-display" ng-repeat="project in $ctrl.projectDisplay track by $index">
-                    <a class="img-link" ng-href="{{project.url}}" target="_blank"> <img class="project-img" ng-src="{{project.img}}"></a>
-                    <section class="overlay hide">{{project.name}}</section>
+                    <img class="project-img" ng-src="{{project.img}}">
+                    <section class="overlay hide">
+                        <section class="project-info">
+                            <p class="project-name">{{project.name}}</p>
+                            <p class="project-description">{{project.description}}</p>
+                            <p class="project-github">Read more on <a class="img-link" ng-href="{{project.url}}" target="_blank">GitHub</a>.</p>
+                        </section>
+                    </section>
                 </section>
             </section>
         </section>
