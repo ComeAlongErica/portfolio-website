@@ -248,7 +248,23 @@ button:hover {
 }
 
 .img-link:hover {
-    border-bottom: solid 1px rgba(31, 41, 44, 0.76);;
+    border-bottom: solid 1px rgba(31, 41, 44, 0.76);
+}
+
+.fake-button {
+    color: #608CB0;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(31, 41, 44);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 170ms ease-in-out;
+}
+
+.fake-button:hover {
+    background-color: rgb(31, 41, 44);
+    color: rgb(247, 247, 247);
 }
 
 .hide {
@@ -269,7 +285,7 @@ button:hover {
 .project-info {
     position: absolute;
     top: 0;
-    margin: 30px 10px;
+    margin: 15px 10px;
 }
 
 .project-name {
@@ -289,7 +305,7 @@ button:hover {
 }
 
 .project-github {
-    margin: 10px;
+    margin: 15px;
 }
 
 @media only screen and (max-width: 971px) {
