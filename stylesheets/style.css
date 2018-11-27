@@ -259,7 +259,7 @@ button:hover {
     padding: 10px;
     font-weight: 700;
     text-decoration: none;
-    transition: 170ms ease-in-out;
+    transition: all .5s ease;
 }
 
 .fake-button:hover {
