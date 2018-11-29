@@ -9,11 +9,15 @@ function domFun() {
             $element.on("mouseenter", () => {
                 if ($element[0].tagName === "SECTION") {
                     $element[0].lastElementChild.classList.toggle("hide");
+                    $element[0].style.height = "175px";
+                    $element[0].style.width = "280px";
                 }
             });
             $element.on("mouseleave", () => {
                 if ($element[0].tagName === "SECTION") {
                     $element[0].lastElementChild.classList.toggle("hide");
+                    $element[0].style.height = "";
+                    $element[0].style.width = "";
                 }
             });
         }
