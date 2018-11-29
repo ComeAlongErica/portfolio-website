@@ -308,6 +308,38 @@ button:hover {
     margin: 15px;
 }
 
+/* form */
+
+.form-text {
+    color: rgb(96, 140, 176);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 25px 0 8px 0;
+    line-height: 25px;
+}
+
+.form-top-text {
+    color: rgb(96, 140, 176);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin: 0 0 8px 0;
+}
+
+form {
+    margin-right: 30px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(219, 219, 219);
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
 @media only screen and (max-width: 971px) {
 
     .greeting {
