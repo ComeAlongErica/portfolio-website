@@ -192,9 +192,9 @@ h1 {
 button {
     margin-top: 20px;
     margin-bottom: 40px;
-    font-size: 20px;
+    font-size: 18px;
     width: 200px;
-    padding: 15px;
+    padding: 12px;
     color: #608CB0;
     border: 3px solid #608CB0;
     border-radius: 5px;
@@ -323,7 +323,7 @@ button:hover {
     color: rgb(96, 140, 176);
     font-size: 15px;
     letter-spacing: 1px;
-    margin: 25px 0 8px 0;
+    margin: 25px 0 6px 0;
     line-height: 25px;
 }
 
@@ -331,7 +331,7 @@ button:hover {
     color: rgb(96, 140, 176);
     font-size: 15px;
     letter-spacing: 1px;
-    margin: 0 0 8px 0;
+    margin: 0 0 6px 0;
 }
 
 .test {
