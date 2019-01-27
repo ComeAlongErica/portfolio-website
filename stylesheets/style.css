@@ -5,6 +5,7 @@ body {
 }
 
 /* page change animation */
+
 .fade {
     position: absolute;
     top: 0;
@@ -13,25 +14,29 @@ body {
     height: 100%;
     opacity: 1;
 }
-.fade.ng-enter,
-.fade.ng-leave {
+
+.fade.ng-enter, .fade.ng-leave {
     -webkit-transition: all 1s ease;
     transition: all 1s ease;
 }
+
 .fade.ng-enter {
     opacity: 0;
 }
+
 .fade.ng-enter-active {
     opacity: 1;
 }
+
 .fade.ng-leave {
     opacity: 1;
 }
+
 .fade.ng-leave-active {
     opacity: 0;
 }
 
-header { 
+header {
     display: flex;
     justify-content: space-between;
     height: 80px;
@@ -82,25 +87,26 @@ i:hover {
 
 .navlink:hover {
     color: #608CB0;
-    border-bottom: solid 1px rgb(115,115,115);
+    border-bottom: solid 1px rgb(115, 115, 115);
 }
 
 .body-link {
     padding: 0;
     color: #608CB0;
     text-decoration: none;
-    border-bottom: solid 1px rgba(115,115,115,.2);
+    border-bottom: solid 1px rgba(115, 115, 115, .2);
     transition: border-color 170ms ease-in-out;
 }
 
 .body-link:hover {
-    border-bottom: solid 1px rgb(115,115,115);
+    border-bottom: solid 1px rgb(115, 115, 115);
 }
 
 .logo {
     padding: 20px;
     height: 40px;
 }
+
 .nav {
     margin: 20px;
 }
@@ -130,8 +136,8 @@ h1 {
 }
 
 .tracking-in-expand {
-	-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-	        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 .smaller {
@@ -139,7 +145,7 @@ h1 {
     display: block;
 }
 
-.body-text{
+.body-text {
     line-height: 25px;
     margin-bottom: 20px;
 }
@@ -147,38 +153,47 @@ h1 {
 .color1, .color2, .color3, .color4, .color5, .color6, .color7, .color8, .color9 {
     transition: color 0.3s ease;
 }
+
 .color1:hover {
     color: #00B697;
     cursor: default;
 }
+
 .color2:hover {
     color: #009CAD;
     cursor: default;
 }
+
 .color3:hover {
     color: #3879B1;
     cursor: default;
 }
+
 .color4:hover {
     color: rgb(70, 123, 192);
     cursor: default;
 }
+
 .color5:hover {
     color: #3879B1;
     cursor: default;
 }
+
 .color6:hover {
     color: #009CAD;
     cursor: default;
 }
+
 .color7:hover {
     color: #00B697;
     cursor: default;
 }
+
 .color8:hover {
     color: #00C884;
     cursor: default;
 }
+
 .color9:hover {
     color: #C6C600;
     cursor: default;
@@ -189,8 +204,8 @@ h1 {
     width: 45%;
     height: 100vh;
     background-image: url("../images/blackandwhiteport.jpg");
-    background-position: center; 
-    background-repeat: no-repeat; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
 }
 
@@ -228,21 +243,21 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 5px;
+    border-radius: 3px;
     position: relative;
     text-align: center;
     overflow: hidden;
     margin: 10px;
     width: 250px;
     height: 150px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    transition: all 0.6s cubic-bezier(.25,.8,.25,1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.6s cubic-bezier(.25, .8, .25, 1);
 }
 
 .project-display:hover {
     height: 175px;
     width: 280px;
-    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
 .project-img {
@@ -270,7 +285,7 @@ button:hover {
 
 .overlay {
     transition: all .4s ease-in-out;
-    background-color: rgba(31, 41, 44, 0.753);
+    background-color: rgba(31, 41, 44, 0.541);
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -280,8 +295,8 @@ button:hover {
 }
 
 .project-display:hover .project-img {
-    filter: gray; /* IE5+ */
-    -webkit-filter: grayscale(1);
+    filter: blur(10px) grayscale(.5);
+    -webkit-filter: blur(10px) grayscale(.5);
 }
 
 .project-info {
@@ -328,7 +343,6 @@ button:hover {
 }
 
 .fake-button:hover {
-    background-color: rgb(247, 247, 247);
     color: rgb(117, 120, 124);
     border-bottom: 4px solid rgb(141, 159, 167);
 }
@@ -374,40 +388,39 @@ input, textarea {
     font-size: 15px;
 }
 
-
 /**
  * ----------------------------------------
  * animation tracking-in-expand
  * ----------------------------------------
  */
- @-webkit-keyframes tracking-in-expand {
+
+@-webkit-keyframes tracking-in-expand {
     0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
+        letter-spacing: -0.5em;
+        opacity: 0;
     }
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  @keyframes tracking-in-expand {
+}
+
+@keyframes tracking-in-expand {
     0% {
-      letter-spacing: -0.5em;
-      opacity: 0;
+        letter-spacing: -0.5em;
+        opacity: 0;
     }
     40% {
-      opacity: 0.6;
+        opacity: 0.6;
     }
     100% {
-      opacity: 1;
+        opacity: 1;
     }
-  }
-  
+}
 
 @media only screen and (max-width: 971px) {
-
     .greeting {
         width: auto;
         position: absolute;
@@ -419,35 +432,30 @@ input, textarea {
         height: 300px;
         min-width: 100vw;
     }
-
     header {
         position: absolute;
         width: 100vw;
         top: 0;
     }
-
     .home-body {
         margin: 0 auto;
         flex-grow: 1;
         height: 100vh;
         width: 100vw;
     }
-    
     h1 {
         font-family: 'Roboto Slab', serif;
         font-size: 125px;
         margin: 50px 0 30px 0;
     }
-    
     .smaller {
         text-align: left;
         font-size: 50px;
         display: block;
     }
-
 }
 
-@media only screen and (max-width : 736px) {
+@media only screen and (max-width: 736px) {
     .greeting {
         position: absolute;
         top: 200px;
@@ -457,51 +465,41 @@ input, textarea {
         top: 0;
         height: 200px;
     }
-
     header {
         position: absolute;
         top: 0;
     }
-
     h1 {
         font-size: 70px;
     }
-
     button {
         width: 100%;
     }
-
 }
 
-@media only screen and (max-width : 500px) {
-
+@media only screen and (max-width: 500px) {
     h1 {
         font-size: 70px;
     }
-
     .greeting {
         margin: 30px 20px;
         position: absolute;
         top: 200px;
     }
-
     .image-container {
         position: absolute;
         top: 0;
         height: 200px;
     }
-
     header {
         position: absolute;
         top: 0;
     }
-
     .nav {
         display: flex;
         flex-direction: column;
     }
-     .navlink {
-         padding: 20px;
-     }
-     
+    .navlink {
+        padding: 20px;
+    }
 }
