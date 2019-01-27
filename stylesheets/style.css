@@ -270,13 +270,18 @@ button:hover {
 
 .overlay {
     transition: all .4s ease-in-out;
-    background-color: rgba(34, 39, 44, 0.85);
+    background-color: rgba(31, 41, 44, 0.753);
     height: 100%;
     width: 100%;
     z-index: 100;
     position: absolute;
     top: 0;
     left: 0;
+}
+
+.project-display:hover .project-img {
+    filter: gray; /* IE5+ */
+    -webkit-filter: grayscale(1);
 }
 
 .project-info {
