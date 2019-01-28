@@ -285,7 +285,7 @@ button:hover {
 
 .overlay {
     transition: all .4s ease-in-out;
-    background-color: rgba(31, 41, 44, 0.541);
+    background: linear-gradient(rgba(31, 41, 44, 0.2),rgba(31, 41, 44, 1));
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -295,8 +295,8 @@ button:hover {
 }
 
 .project-display:hover .project-img {
-    filter: blur(8px) grayscale(1);
-    -webkit-filter: blur(8px) grayscale(1);
+    filter: blur(5px) grayscale(1);
+    -webkit-filter: blur(5px) grayscale(1);
 }
 
 .project-info {
