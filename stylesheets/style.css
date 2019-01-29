@@ -285,7 +285,7 @@ button:hover {
 
 .overlay {
     transition: all .4s ease-in-out;
-    background: linear-gradient(rgba(31, 41, 44, 0.2),rgba(31, 41, 44, 1));
+    background: linear-gradient(rgba(96, 134, 145, 0.2),rgb(41, 64, 71));
     height: 100%;
     width: 100%;
     z-index: 100;
