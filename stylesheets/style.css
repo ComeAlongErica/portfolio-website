@@ -255,8 +255,8 @@ button:hover {
 }
 
 .project-display:hover {
-    height: 175px;
-    width: 280px;
+    border-radius: 10px;
+    transform: scale(1.15);
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
@@ -265,17 +265,16 @@ button:hover {
 }
 
 .img-link {
-    color: rgba(255, 255, 255, 0.685);
+    color: #1F292C;
     margin: 0;
     font-weight: 500;
     text-decoration: none;
-    border-bottom: solid 1px rgba(255, 255, 255, 0.685);
+    border-bottom: solid 1px rgba(31, 41, 44, 0.589);
     transition: .5s ease;
 }
 
 .img-link:hover {
-    color: rgb(255, 255, 255);
-    border-bottom: solid 1px rgb(255, 255, 255);
+    color: rgba(31, 41, 44, 0.589);
 }
 
 .hide {
@@ -284,49 +283,34 @@ button:hover {
 }
 
 .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
     transition: all .4s ease-in-out;
-    background: linear-gradient(rgba(96, 134, 145, 0.2),rgb(41, 64, 71));
+    background: linear-gradient(rgba(255, 255, 255, .9), rgba(231, 233, 235, 0.9));
     height: 100%;
     width: 100%;
     z-index: 100;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.project-display:hover .project-img {
-    filter: blur(5px) grayscale(1);
-    -webkit-filter: blur(5px) grayscale(1);
-}
-
-.project-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 18px 13px;
 }
 
 .project-name {
-    color: white;
-    font-weight: 500;
-    font-size: 17px;
-    letter-spacing: 1px;
-    margin-bottom: 5px;
+    color: #1F292C;
+    font-weight: 700;
+    font-size: 19px;
+    margin: 10px 0 8px 0;
 }
 
 .project-description {
-    color: white;
-    font-size: 14px;
-    line-height: 20px;
-    margin-bottom: 15px;
-    width: 255px;
+    color: #1F292C;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 20px 20px 20px;
 }
 
 .project-github {
-    color: rgba(255, 255, 255, 0.616);
-    font-size: 12px;
-    margin: 10px;
+    color: #1F292C;
+    font-size: 11px;
+    margin-bottom: 13px;
 }
 
 .fake-button {
@@ -340,16 +324,18 @@ button:hover {
     text-decoration: none;
     text-transform: uppercase;
     transition: all .5s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
 }
 
 .fake-button:hover {
-    color: rgb(117, 120, 124);
-    border-bottom: 4px solid rgb(141, 159, 167);
+    color: rgb(18, 57, 70);
+    border-bottom: 4px solid rgb(33, 79, 94);
 }
 
 a.img-link {
     display: inline-block;
-    margin-top: 7px;
+    margin-top: 10px;
 }
 
 /* form */
